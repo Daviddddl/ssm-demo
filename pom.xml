@@ -6,7 +6,7 @@
 
   <groupId>pw.tao</groupId>
   <artifactId>ssm-demo</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <name>ssm-demo Maven Webapp</name>
