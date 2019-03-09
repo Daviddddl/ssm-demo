@@ -27,7 +27,7 @@
                     <h1 class="logo-name">YT</h1>
 
                 </div>
-                <h3 class="title">于桃欢迎你</h3>
+                <h3 class="title">网络爬虫程序</h3>
 
 
                 <div class="form-group">
@@ -39,7 +39,7 @@
                 <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
 
 
-                <p class="text-muted text-center"> <a href="jsp/index_v.jsp"><small>忘记密码了？</small></a> | <a href="register">注册一个新账号</a>
+                <p class="text-muted text-center"> <a href="./WEB-INF/jsp/index_v.jsp"><small>忘记密码了？</small></a> | <a href="register">注册一个新账号</a>
                 </p>
 
 
