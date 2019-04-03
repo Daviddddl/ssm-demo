@@ -24,7 +24,7 @@
             <div>
                 <div>
 
-                    <h1 class="logo-name">YT</h1>
+                    <h1 class="logo-name">爬虫</h1>
 
                 </div>
                 <h3 class="title">网络爬虫程序</h3>
