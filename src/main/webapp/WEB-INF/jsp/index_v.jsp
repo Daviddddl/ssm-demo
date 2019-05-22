@@ -213,11 +213,16 @@
                     <div class="row content-tabs">
                         <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i>
             </button>
+
                         <nav class="page-tabs J_menuTabs">
+                            <div class="">
+                                <a href="/index_v" class=" J_menuTab" >刷新</a>
+                            </div>
                             <div class="page-tabs-content">
                                 <a href="javascript:;" class="active J_menuTab" data-id="index_v1.html">首页</a>
                             </div>
                         </nav>
+
                         <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i>
             </button>
                         <div class="btn-group roll-nav roll-right">
@@ -234,6 +239,7 @@
                                 </li>
                             </ul>
                         </div>
+                        <a href="/index_v" class="roll-nav roll-right J_menuTab">刷新</a>
                         <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
                     </div>
                     <div class="row J_mainContent" id="content-main">
