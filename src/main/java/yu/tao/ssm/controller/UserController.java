@@ -62,7 +62,7 @@ public class UserController {
     // 跳转到注册页
     @RequestMapping(value="/register",method = RequestMethod.GET,produces="text/html;charset=UTF-8;")
     public String register(){
-        return  "register";
+        return "register";
     }
 
     // 注册模块的响应
@@ -98,7 +98,7 @@ public class UserController {
     // 跳转到主页
     @RequestMapping(value="/index_v",method = RequestMethod.GET,produces="text/html;charset=UTF-8;")
     public String index_v(HttpServletRequest request){
-        return  "index_v";
+        return "index_v";
     }
 
         // // v3展示

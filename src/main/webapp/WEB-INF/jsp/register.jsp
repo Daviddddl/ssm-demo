@@ -112,7 +112,7 @@
                                 console.log(data)
                                 if (data.code == 200) {
                                     // console.log(data.msg)
-                                    window.location.href = "http://127.0.0.1:8080" + data.msg
+                                    window.location.href =  data.msg
                                 }
                             },
                             error: function(err) {

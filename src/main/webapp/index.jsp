@@ -39,7 +39,7 @@
                 <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
 
 
-                <p class="text-muted text-center"> <a href="./WEB-INF/jsp/index_v.jsp"><small>忘记密码了？</small></a> | <a href="register">注册一个新账号</a>
+                <p class="text-muted text-center"> <a href="index_v"><small>忘记密码了？</small></a> | <a href="register">注册一个新账号</a>
                 </p>
 
 
@@ -74,7 +74,7 @@
                                 parent.layer.msg(data.msg);
                             } else {
 
-                                window.location.href = "http://127.0.0.1:8080" + data.msg
+                                window.location.href =  data.msg
                             }
 
 
