@@ -36,7 +36,7 @@
                         <h5>文章总数</h5>
                     </div>
                     <div class="ibox-content">
-                        <h1 class="no-margins">862</h1>
+                        <h1 class="no-margins" id="articleMouthTotal">862</h1>
                         <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i>
                         </div>
                         <small>文章总数</small>
@@ -50,7 +50,7 @@
                         <h5>文章总数</h5>
                     </div>
                     <div class="ibox-content">
-                        <h1 class="no-margins">2,758</h1>
+                        <h1 class="no-margins" id="articleYearTotal">2,758</h1>
                         <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i>
                         </div>
                         <small>文章总数</small>
@@ -78,7 +78,7 @@
                         <h5>今日爬取总数</h5>
                     </div>
                     <div class="ibox-content">
-                        <h1 class="no-margins">54</h1>
+                        <h1 class="no-margins" id="reptileCount">54</h1>
                         <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i>
                         </div>
                         <small>12月</small>
@@ -109,7 +109,7 @@
                             <div class="col-sm-3">
                                 <ul class="stat-list">
                                     <li>
-                                        <h2 class="no-margins">2,758</h2>
+                                        <h2 class="no-margins" id="articleColumnyearTotal">2,758</h2>
                                         <small>文章总数</small>
                                         <div class="stat-percent">48% <i class="fa fa-level-up text-navy"></i>
                                         </div>
@@ -118,7 +118,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <h2 class="no-margins ">862</h2>
+                                        <h2 class="no-margins" id="articleColumnMouthTotal">862</h2>
                                         <small>最近一个月文章总数</small>
                                         <div class="stat-percent">35% <i class="fa fa-level-down text-navy"></i>
                                         </div>
@@ -465,7 +465,6 @@
                     barWidth: 24 * 60 * 60 * 600,
                     lineWidth: 0
                 }
-
             }, {
                 label: "新增阅读量",
                 data: data2,
@@ -536,10 +535,16 @@
                 return new Date(year, month - 1, day).getTime();
             }
 
-            var previousPoint = null,
-                previousLabel = null;
+            function refreshCharts() {
+                $.plot($("#flot-dashboard-chart"), dataset, options);
+                data2.push(data2.shift());
+                data3.push(data3.shift());
+                setTimeout(function () {
+                    refreshCharts();
+                }, 5000)
+            }
 
-            $.plot($("#flot-dashboard-chart"), dataset, options);
+            refreshCharts();
 
             var mapData = {
                 "US": 298,
@@ -577,8 +582,27 @@
         });
     </script>
 
-    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
-    <!--统计代码，可删除-->
+    <script>
+        var baseData = {
+            'articleMouthTotal': 862,
+            'articleYearTotal': 2758,
+            'reptileCount': 54
+        };
+
+        $(document).ready(function() {
+
+            setInterval(function () {
+                var random = Math.round(Math.random()*10);
+                for(var key in baseData) {
+                    baseData[key] += random;
+                    $('#' + key).html(baseData[key]);
+                };
+                $('#articleColumnMouthTotal').html(baseData['articleMouthTotal']);
+                $('#articleColumnyearTotal').html(baseData['articleYearTotal']);
+            }, 5000);
+
+        });
+    </script>
 
 </body>
 
