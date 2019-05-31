@@ -83,28 +83,33 @@
                                     <li>
                                         <a href="#">管理记录 <span class="fa arrow"></span></a>
                                         <ul class="nav nav-third-level">
+<%--
                                             <li><a class="J_menuItem" href="../../timeline_v2.html">管理记录</a>
+--%>
+                                            <li><a class="J_menuItem" href="../../pie_chart.html">数据展示</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a class="J_menuItem" href="../../pin_board.html">精品文章</a>
+                                    <li><a class="J_menuItem" href="../../policy_deploy.html">政策热度显示</a>
                                     </li>
 
-                                    <li><a class="J_menuItem" href="../../search_results.html">搜索</a>
+                                    <li>
+                                        <a class="J_menuItem" href="../../cloud.jpg">词云展示</a>
+                                        <a class="J_menuItem" href="../../frequency.png">词频展示</a>
                                     </li>
 
                                 </ul>
                             </li>
 
 
-                            <li>
+                            <%--<li>
                                 <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">图库管理</span><span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li><a class="J_menuItem" href="../../basic_gallery.html">基本图库</a>
                                     </li>
 
                                 </ul>
-                            </li>
+                            </li>--%>
 
 
 
